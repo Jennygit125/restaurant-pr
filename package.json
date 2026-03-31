@@ -6,8 +6,9 @@
   "author": "",
   "main": "main.js",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
+    "build": "node scripts/build.mjs",
+    "build:bundle": "webpack --mode production",
+    "watch": "webpack --watch --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
