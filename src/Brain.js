@@ -1,13 +1,28 @@
-export function createRestaurantHomePage() {
+function renderPage(title, description) {
   const content = document.getElementById("content");
-  const htmlCode =
-    "<h1>Welcome to our restaurant</h1><p>Best food in town just for you!</p>";
 
   if (content) {
-    content.innerHTML = htmlCode;
+    const heading = document.createElement("h1");
+    const paragraph = document.createElement("p");
+
+    heading.textContent = title;
+    paragraph.textContent = description;
+    content.replaceChildren(heading, paragraph);
+    return true;
+  }
+
+  console.error("Element with ID 'content' not found");
+  return false;
+}
+
+export function createRestaurantHomePage() {
+  if (
+    renderPage(
+      "Welcome to our restaurant",
+      "Best food in town just for you!",
+    )
+  ) {
     console.log("Home page function executed");
-  } else {
-    console.error("Element with ID 'content' not found");
   }
 }
 
@@ -18,8 +33,7 @@ export const pageRenderers = {
 export function notifyMissingPage(pageName) {
   const message = `${pageName} page not generated.`;
 
-  if (typeof window !== "undefined" && typeof window.alert === "function") {
-    window.alert(message);
+  if (renderPage(pageName, message)) {
     return;
   }
 
