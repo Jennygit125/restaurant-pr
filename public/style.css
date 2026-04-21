@@ -393,7 +393,7 @@ body.hero-carousel .hero-image:nth-of-type(5) {
     }
 
     .crossfade-container {
-        position: fixed;
+        position: relative;
         padding: 1rem;
         box-sizing: border-box;
     }
