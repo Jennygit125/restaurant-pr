@@ -344,7 +344,7 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.877);
     animation: fadeOut 0s forwards;
-    animation-delay: 5s; /* Wait 5 seconds before hiding */
+    animation-delay: 3s; /* Wait 5 seconds before hiding */
 }
 
 @keyframes fadeOut {
