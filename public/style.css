@@ -333,6 +333,29 @@ body.hero-carousel .hero-image:nth-of-type(4) {
 body.hero-carousel .hero-image:nth-of-type(5) {
     animation-delay: 16s;
 }
+footer {
+    text-align: center;
+    background: transparent;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.877);
+    animation: fadeOut 0s forwards;
+    animation-delay: 5s; /* Wait 5 seconds before hiding */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+footer:hover {
+    opacity: 0.9 !important;
+}
 
 @keyframes firstImageFade {
     0% { opacity: 1; }
